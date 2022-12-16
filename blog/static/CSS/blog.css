@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Carattere';
+	src: url('../css/Carattere.ttf') format("truetype");
+}
+
 .page-header {
     background-color: #1f60de;
     margin-top: 0;
@@ -15,7 +20,7 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: Carattere;
+    font-family: 'Carattere';
 }
 
 .date {
