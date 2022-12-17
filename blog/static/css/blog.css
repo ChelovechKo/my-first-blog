@@ -18,12 +18,21 @@ h1, h2, h3, h4 {
     font-family: 'Carattere', cursive;
 }
 
-.date {
-    color: #828282;
-}
-
 .save {
     float: right;
+}
+
+.btn {
+	float: right;	
+	left: 30%;
+	position: relative;
+}
+
+.date {
+    color: #828282;
+	float: right;
+	margin-right: 80px;
+	margin-top: 5px;
 }
 
 .post-form textarea, .post-form input {
