@@ -16,23 +16,29 @@
 
 h1, h2, h3, h4 {
     font-family: 'Carattere', cursive;
+	display: inline;
 }
 
 .save {
     float: right;
 }
 
-.btn {
-	float: right;	
-	left: 30%;
-	position: relative;
+.edit_btn{
+	float: right;
+	background-color: #fcc;
+	margin-right: 1rem;	
+	margin-top: 6px;
+}
+
+.post_header{
+    height: 40px;
+	line-height: 40px;
 }
 
 .date {
     color: #828282;
 	float: right;
-	margin-right: 80px;
-	margin-top: 5px;
+	white-space: nowrap
 }
 
 .post-form textarea, .post-form input {
