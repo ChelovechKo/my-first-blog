@@ -9,12 +9,16 @@
 						{{ post.published_date }}
 				{% endif %}
 			</span>
-			<span class="edit_btn">
-				{% if user.is_authenticated %}
-						<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-				{% endif %}
-			</span>			
-		</div> 
+			{% if user.is_authenticated %}
+				<span class="button">
+					<a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+				</span>
+				<span class="button">
+					<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+				</span>
+			{% endif %}
+		</div>
+		<br>
 		<div>
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
