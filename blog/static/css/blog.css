@@ -23,13 +23,44 @@ h1, h2, h3, h4 {
     float: right;
 }
 
-.button{
+.button {
 	float: right;
 	margin-right: 1rem;	
 	margin-top: 6px;
+	height: 28px;
 }
 
-.post_header{
+[data-title]:hover:after {
+    content: attr(data-title);
+	display: none;
+	position: absolute;
+	bottom: -30px;
+	left: 20px;
+	background: #000000;
+    border-radius: 5px;	
+	color: #b5b8b1;
+	
+	word-spacing: normal;
+	padding: 0px 5px 0px 5px;
+	
+	white-space: nowrap;
+	line-height: 2;
+	text-align: center;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.16);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16);
+	box-shadow: 0 1px 1px rgba(0,0,0,.16);
+	font-size: 12px;
+}
+
+[data-title]:hover:after {
+	display: block;	
+}
+
+[data-title] {
+    position: relative;
+}
+
+.post_header {
     height: 40px;
 	line-height: 40px;
 }
@@ -48,7 +79,7 @@ h1, h2, h3, h4 {
     color: #ffffff;
     float: right;
     font-size: 26pt;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .post {

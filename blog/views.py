@@ -4,6 +4,15 @@ from .models import Post
 from .forms import PostForm
 
 
+def post_publish(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.publish()
+    return redirect('post_detail', pk=pk)
+    
+def publish(self):
+    self.published_date = timezone.now()
+    self.save()
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
