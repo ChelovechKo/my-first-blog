@@ -8,7 +8,7 @@
 					<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
 				</span>
 				<span class="date">
-					<p>Published: {{ post.published_date|date:'F j, Y, g:i a' }}</p>
+					<p>Created: {{ post.created_date|date:'F j, Y, g:i a' }}</p>
 				</span>			
 			</div>
 			<br>

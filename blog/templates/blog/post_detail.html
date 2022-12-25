@@ -6,7 +6,7 @@
 			<span><h1>{{ post.title }}</h1></span>
 			<span class="date">
 				{% if post.published_date %}
-						{{ post.published_date }}
+						{{ post.published_date|date:'F j, Y, g:i a' }}
 				{% endif %}
 			</span>
 			{% if user.is_authenticated %}
