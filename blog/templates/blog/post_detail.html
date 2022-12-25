@@ -18,7 +18,7 @@
 				</span>
 				{% if not post.published_date %}
 					<span class="button" data-title="Publish">
-						<a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}"><span class="glyphicon glyphicon-send"></span></a>
+						<a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
 					</span>
 				{% endif %}
 			{% endif %}
