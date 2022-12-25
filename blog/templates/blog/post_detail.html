@@ -4,23 +4,25 @@
     <div class="post">
 		<div class="post_header">
 			<span><h1>{{ post.title }}</h1></span>
+			
 			<span class="date">
 				{% if post.published_date %}
 					{{ post.published_date|date:'F j, Y, g:i a' }}
 				{% endif %}
 			</span>
-			{% if user.is_authenticated %}
-				<span class="button" data-title="Remove">
-					<a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+			
+			<span class="button" data-title="Remove">
+				<a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+			</span>
+			
+			<span class="button" data-title="Edit">
+				<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+			</span>
+			
+			{% if not post.published_date %}
+				<span class="button" data-title="Publish">
+					<a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
 				</span>
-				<span class="button" data-title="Edit">
-					<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-				</span>
-				{% if not post.published_date %}
-					<span class="button" data-title="Publish">
-						<a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
-					</span>
-				{% endif %}
 			{% endif %}
 		</div>
 		<br>

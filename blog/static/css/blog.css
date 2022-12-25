@@ -36,21 +36,22 @@ h1, h2, h3, h4 {
 	position: absolute;
 	bottom: -30px;
 	left: 20px;
-	background: #000000;
-    border-radius: 5px;	
-	color: #b5b8b1;
-	
-	word-spacing: normal;
+	border-radius: 5px;
 	padding: 0px 5px 0px 5px;
 	
-	white-space: nowrap;
-	line-height: 2;
-	text-align: center;
 	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.16);
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16);
-	box-shadow: 0 1px 1px rgba(0,0,0,.16);
+	box-shadow: 0 1px 1px rgba(0,0,0,.16);	
+	
+	/*background: #1f60de;
+	color: #ffffff;
+	opacity: .8;*/
+	
+	text-align: center;
 	font-size: 12px;
+	line-height: 2;
 }
+
 
 [data-title]:hover:after {
 	display: block;	
@@ -58,6 +59,18 @@ h1, h2, h3, h4 {
 
 [data-title] {
     position: relative;
+}
+
+.button[data-title]:hover:after {
+	background: #1f60de;
+	color: #ffffff;
+	opacity: .8;
+}
+
+.page-header [data-title]:hover:after {
+	background: #ffffff;
+	color: #1f60de;
+	opacity: .8;
 }
 
 .post_header {
@@ -79,7 +92,7 @@ h1, h2, h3, h4 {
     color: #ffffff;
     float: right;
     font-size: 26pt;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .post {
